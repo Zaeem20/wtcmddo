@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/wtcmdo.png" alt="wtcmddo logo" width="360" style="margin-bottom: -75px;">
+<img src="assets/wtcmdo.png" alt="wtcmddo logo" width="360">
 
 # wtcmddo
 
@@ -40,11 +40,11 @@
 ## Installation
 
 ```bash
+pip install wtcmddo
+# or
 git clone https://github.com/Zaeem20/wtcmddo.git
 cd wtcmddo
 uv sync          # recommended (uses uv_build)
-# or
-pip install .
 ```
 
 ## Configuration
@@ -66,6 +66,30 @@ export OPENROUTER_API_KEY="sk-or-v1-..."
 ```
 
 The env var is used as a fallback when no key is set in the config file.
+
+## Free Usage
+
+You can use `wtcmddo` for free with OpenRouter's free tier — no credit card required.
+
+1. **Get a key** — Sign up at [openrouter.ai/keys](https://openrouter.ai/keys) and create a free API key.
+2. **Set the model** to one of OpenRouter's free models:
+
+```bash
+# Use the setup wizard
+wtcmddo --setup
+
+# Or set the model directly
+wtcmddo --model openrouter/free ls -la
+```
+
+**Free models on OpenRouter** (as of now) include `openrouter/free` (routes to the best available free model), (Kimi/DeepSeek/Nemtron/Gemma) and others. You can browse the full list at [openrouter.ai/models](https://openrouter.ai/models).
+
+The `--base-url` defaults to OpenRouter already, so you only need the key and the model:
+
+```bash
+export OPENROUTER_API_KEY="sk-or-v1-..."
+wtcmddo --model openrouter/free "curl https://example.com"
+```
 
 ## Usage
 
@@ -143,12 +167,12 @@ Defaults: base URL `https://openrouter.ai/api/v1`, model `openai/gpt-4o-mini`.
         │
         ▼
  ┌─────────────┐    spinner animates     ┌──────────────┐
- │  parse args │ ─────────────────────▶  │  LLM analyzes │
- └─────────────┘                         │   the command  │
+ │  parse args │ ────────────────────▶  │  LLM analyzes │
+ └─────────────┘                         │   the command │
         │                                └──────────────┘
         ▼                                        │
  ┌─────────────┐    color-coded panel            │
- │  display    │ ◀───────────────────────────────┘
+ │  display    │ ◀──────────────────────────────┘
  │  explanation│
  └─────────────┘
         │
