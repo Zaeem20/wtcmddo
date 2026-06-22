@@ -1,0 +1,23 @@
+[project]
+name = "wtcmddo"
+version = "0.1.0"
+description = "Interactive command explainer with risk assessment"
+readme = "README.md"
+authors = [
+    { name = "Zaeem20", email = "duranizaeem@gmail.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "openai>=1.35.0",
+    "rich>=15.0.0",
+]
+
+[project.scripts]
+wtcmddo = "wtcmddo:main"
+whatcmd = "wtcmddo:main"
+explaincmd = "wtcmddo:main"
+explain = "wtcmddo:main"
+
+[build-system]
+requires = ["uv_build>=0.11.14,<0.12.0"]
+build-backend = "uv_build"
