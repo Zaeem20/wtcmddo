@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/wtcmdo.png" alt="wtcmddo logo" width="360">
+<img src="https://raw.githubusercontent.com/Zaeem20/wtcmddo/refs/heads/master/assets/wtcmdo.png" alt="wtcmddo logo" width="360">
 
 # wtcmddo
 

@@ -1,6 +1,6 @@
 [project]
 name = "wtcmddo"
-version = "0.1.0"
+version = "0.1.1"
 description = "Interactive command explainer with risk assessment"
 readme = "README.md"
 authors = [
